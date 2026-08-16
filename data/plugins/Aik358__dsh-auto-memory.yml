@@ -2,5 +2,5 @@ url: https://github.com/Aik358/dsh-auto-memory
 name: Aik358/dsh-auto-memory
 category: memory
 description:
-  en: 'Auto-memory for DSH: three-layer memory (user / project notes / daily logs) with automatic injection, per-turn auto-consolidation, AI greetings, smart search, a calendar view and a settings page, plus inheritance of other AI tools'' memories.'
-  zh: DSH 自动记忆插件：三层记忆自动注入与检索、每轮对话自动沉淀、AI 时段问候与三级抽屉、智能检索、日历视图与设置页，支持继承其他 AI 工具的记忆。
+  en: 'A caring memory companion for DSH: remembers you across sessions, greets you warmly, proactively files deadlines into a calendar and reminds you, auto-consolidates every turn, and inherits memories from other AI tools.'
+  zh: DSH 的贴心记忆管家：跨会话记住你、暖心问候、主动把约定记进日历并提醒你、每轮自动沉淀、可继承其他 AI 工具的记忆。
