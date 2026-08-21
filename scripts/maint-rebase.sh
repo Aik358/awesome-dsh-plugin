@@ -61,6 +61,20 @@ for n in "$@"; do
         // contributors'"'"' diffs and read as "this PR also touched unrelated
         // entries", which is the exact signal used to catch cross-entry damage.
         // Poisoning it is worse than an untidy file.
+        // Screenshots for entries that are no longer listed have to go. An old
+        // branch carries keys for entries main has since removed or renamed,
+        // and build-site refuses a key that matches no entry — "is not a
+        // listed entry URL". Two rebases came back red for exactly this and
+        // for nothing else, which reads to the contributor as their
+        // submission being broken. Their screenshots are untouched; only keys
+        // pointing at entries that do not exist are dropped.
+        const listed = new Set(
+          fs.readdirSync("data/plugins")
+            .filter((f) => f.endsWith(".yml"))
+            .map((f) => (fs.readFileSync("data/plugins/" + f, "utf8").match(/^url:\s*(\S+)/m) || [])[1])
+            .filter(Boolean),
+        )
+        for (const k of Object.keys(out)) if (!listed.has(k)) delete out[k]
         const order = [...Object.keys(ours).filter((k) => k in out), ...Object.keys(out).filter((k) => !(k in ours))]
         fs.writeFileSync("data/screenshots.json", JSON.stringify(Object.fromEntries(order.map((k) => [k, out[k]])), null, 1) + "\n")
       ' 2>/dev/null; then
@@ -95,6 +109,32 @@ for n in "$@"; do
   # this script had itself preserved.
   git checkout origin/main -- README.md README.zh.md 2>/dev/null
 
+  # Prune screenshots for entries that no longer exist. This has to run on
+  # every rebase, not only when screenshots.json conflicted: a branch that
+  # rebases cleanly keeps its own copy of the file verbatim, dead keys and all,
+  # and build-site then refuses it with "is not a listed entry URL". #1664 and
+  # #1044 both rebased clean and both came back red for four dead keys the
+  # contributor never touched. Contributor screenshots are untouched.
+  if [ -f data/screenshots.json ]; then
+    node -e '
+      const fs = require("fs")
+      let shots
+      try { shots = JSON.parse(fs.readFileSync("data/screenshots.json", "utf8")) } catch { process.exit(0) }
+      const listed = new Set(
+        fs.readdirSync("data/plugins")
+          .filter((f) => f.endsWith(".yml"))
+          .map((f) => (fs.readFileSync("data/plugins/" + f, "utf8").match(/^url:\s*(\S+)/m) || [])[1])
+          .filter(Boolean),
+      )
+      const dead = Object.keys(shots).filter((k) => !listed.has(k))
+      if (!dead.length) process.exit(0)
+      for (const k of dead) delete shots[k]
+      fs.writeFileSync("data/screenshots.json", JSON.stringify(shots, null, 1) + "\n")
+      console.error("      dropped " + dead.length + " screenshot key(s) for entries that no longer exist")
+    ' 2>&1
+    git add data/screenshots.json 2>/dev/null
+  fi
+
   node scripts/generate-readme.mjs >/dev/null 2>&1 || {
     git checkout -f -q main; echo "$n :: GEN-FAIL (bad entry data)"; continue
   }
@@ -127,6 +167,20 @@ for n in "$@"; do
   if git grep -qE '^(<{7}|>{7}) ' -- 2>/dev/null; then
     echo "$n :: MARKERS (conflict markers in the result — refusing to push)"
     git grep -lE '^(<{7}|>{7}) ' -- 2>/dev/null | sed 's/^/      /'
+    git checkout -f -q main; continue
+  fi
+
+  # A submission changes entry data and the two generated READMEs. Nothing
+  # else. Forks taken before the CI landed carry a branch that *deletes*
+  # .github/workflows — ten open pull requests do this right now — and a clean
+  # rebase preserves that deletion, so rebasing one and merging it would take
+  # the repository's own CI down. pr-guard.yml catches it on the way in; this
+  # catches it on the way out, so a maintainer's rebase can never push a
+  # workflow deletion onto a contributor's branch either. Refuse and report.
+  stray=$(git diff origin/main --name-only | grep -vE '^(data/|README\.md$|README\.zh\.md$)' || true)
+  if [ -n "$stray" ]; then
+    echo "$n :: OUT-OF-SCOPE (touches files a submission has no business changing — refusing to push)"
+    echo "$stray" | sed 's/^/      /'
     git checkout -f -q main; continue
   fi
 
