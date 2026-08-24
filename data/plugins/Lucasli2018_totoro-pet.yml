@@ -1,0 +1,6 @@
+url: https://github.com/Lucasli2018/totoro-pet  # 必须与仓库地址完全一致
+name: Lucasli2018/totoro-pet                   # 列表中将显示的链接文字
+category: ui                             # 插件分类，可选值见下方说明
+description:
+  en: 'DSH Web GUI desktop pet plugin – floating chibi Totoro with interactive feeding, petting, playing, and sleeping mechanics.' # 英文描述，必填
+  zh: 'DSH Web GUI 桌宠插件（悬浮 Q 版龙猫 · 喂食/抚摸/玩耍/睡觉互动养成）' # 中文描述，可选
