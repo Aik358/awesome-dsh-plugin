@@ -1,5 +1,5 @@
-url: https://github.com/coldcgh/dsh-deepseek-chat
-name: coldcgh/dsh-deepseek-chat
+url: https://github.com/zerorigin-studio/dsh-deepseek-chat
+name: zerorigin-studio/dsh-deepseek-chat
 category: ui
 description:
   en: 'Web chat entry for DeepSeek Harness: a sidebar button opening chat.deepseek.com in a dedicated desktop window under dsh-desktop, with in-webview fallback for plain web environments.'
