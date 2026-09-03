@@ -29,7 +29,7 @@ export default [
     privacyPath: '/privacy/',
     privacyBody: 'site/privacy.en.html',
     PRIVACY_TITLE: 'Privacy — Awesome DSH Plugin',
-    PRIVACY_DESC: 'What this site collects and what it does not: no cookies, no browser storage, cookie-less analytics, and optional GitHub-hosted community comments.',
+    PRIVACY_DESC: 'What this site collects and what it does not: no browser storage, cookie-less analytics, Google ads, and optional GitHub-hosted community comments.',
     TITLE: 'Awesome DSH Plugin — Curated DeepSeek Harness (dsh) Plugin List',
     DESC: 'A curated list of {N} DeepSeek Harness (dsh) plugins: UI, themes, sessions, memory, tools, workflow, notifications, models, development, and fun. Updated continuously.',
     SEARCH_PH: 'Search plugins…',
@@ -55,6 +55,9 @@ export default [
     // category, and showing who wrote a plugin is worth more in a result list
     // than showing which of twenty categories it sits in.
     P_TITLE: '{NAME} — dsh plugin · {CAT}',
+    // Used only when an entry's one-line description is too short to stand
+    // alone as a meta description (Bing flags those). {DESC} is the original.
+    P_META_SHORT: '{DESC} · {NAME} is a DeepSeek Harness (dsh) plugin in {CAT}, with the install command, source links and community comments on this page.',
     COPY_LABEL: 'Copy install command',
     COPY_TEXT: 'copy install',
     categories: {
@@ -67,6 +70,7 @@ export default [
       session: 'Sessions & Messages',
       memory: 'Memory',
       tools: 'Tools & Capabilities',
+      wsl: 'WSL & Windows Interop',
       browser: 'Browser & Web',
       vision: 'Vision & Multimodal',
       voice: 'Voice & Audio',
@@ -165,7 +169,7 @@ export default [
     privacyPath: '/zh/privacy/',
     privacyBody: 'site/privacy.zh.html',
     PRIVACY_TITLE: '隐私政策 — Awesome DSH Plugin',
-    PRIVACY_DESC: '本站收集什么、不收集什么：不设 cookie、不写浏览器存储、统计不依赖 cookie，以及由用户主动加载的 GitHub 社区评论。',
+    PRIVACY_DESC: '本站收集什么、不收集什么：不写浏览器存储、统计不依赖 cookie、Google 广告，以及由用户主动加载的 GitHub 社区评论。',
     TITLE: 'Awesome DSH Plugin — DeepSeek Harness（dsh）插件精选列表',
     DESC: 'DeepSeek Harness（dsh）插件精选列表，收录 {N} 个：UI 增强、主题外观、会话记忆、工具、工作流、通知集成、模型接入、开发与娱乐，持续更新。',
     SEARCH_PH: '搜索插件…',
@@ -173,6 +177,9 @@ export default [
     CAT_TITLE: '{CAT} — {N} 个 dsh 插件',
     CAT_DESC: 'DeepSeek Harness（dsh）{CAT}插件共 {N} 个，包括 {TOP}。含安装命令、功能描述与仓库链接，持续更新。',
     P_TITLE: '{NAME} — dsh 插件 · {CAT}',
+    // 仅在条目一句话描述太短、不足以独立作为 meta description 时使用（Bing 会
+    // 标记这类页面）。{DESC} 为原始描述。
+    P_META_SHORT: '{DESC}——{NAME} 是 DeepSeek Harness（dsh）「{CAT}」类插件，本页提供安装命令、来源链接与社区评论。',
     COPY_LABEL: '复制安装命令',
     COPY_TEXT: '复制安装命令',
     categories: {
@@ -185,6 +192,7 @@ export default [
       session: '会话与消息',
       memory: '记忆',
       tools: '工具与能力',
+      wsl: 'WSL 与 Windows 互操作',
       browser: '浏览器与网页',
       vision: '视觉与多模态',
       voice: '语音与音频',
