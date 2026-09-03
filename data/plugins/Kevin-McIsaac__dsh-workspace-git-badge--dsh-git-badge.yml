@@ -1,5 +1,5 @@
-url: https://github.com/Kevin-McIsaac/dsh-workspace-git-badge/tree/main/plugin
-name: Kevin-McIsaac/dsh-workspace-git-badge#plugin
+url: https://github.com/Kevin-McIsaac/dsh-workspace-git-badge/tree/main/dsh-git-badge
+name: Kevin-McIsaac/dsh-workspace-git-badge#dsh-git-badge
 category: git
 description:
   en: 'Git status badges for DSH: sidebar workspace-row badges and an input-row chip showing the current conversation''s workspace git state, with event-driven freshness over SSE.'
