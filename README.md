@@ -988,6 +988,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [tnnevol/fn-os-apps#dsh-codex-auth-plugin](https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin) - ChatGPT OAuth authentication and Codex account management for DeepSeek Harness, including model catalog and usage display.
 - [w4xxx/dsh-xia-plugins#packages/gameassist-roster](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/gameassist-roster) - Daily rotating anime companion persona: deterministic date pick from JSON character cards, roster/reroll tools, and a voice-map route.
 - [wutian122/dsh-remote-shell](https://github.com/wutian122/dsh-remote-shell) - Bundles the remote-shell skill for secure SSH, SFTP, Telnet, and WinRM remote operations, with an encrypted credential vault whose login and execution scripts never accept plaintext passwords.
+- [xxww0098/dsh-plugin-oauth-subs](https://github.com/xxww0098/dsh-plugin-oauth-subs) - Connect ChatGPT Codex, xAI Grok, Zhipu GLM, AWS Kiro, Google Antigravity, and Cursor subscriptions to DeepSeek Harness through OAuth and a local proxy.
 
 ### Sessions & Messages
 
