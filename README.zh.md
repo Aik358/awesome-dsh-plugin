@@ -141,6 +141,7 @@ dsh plugin --profile web add dshmarket
 - [baosfeng/my-dsh-plugins#dsh-think-zh-expand](https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-think-zh-expand) — 思考增强：system-prompt 注入让思考与回复强制中文；思考内容默认展开显示、可交互折叠；界面英文标签中文化（npm: `dsh-think-zh-expand`）。
 - [dsh-keep-awake](https://github.com/bearice/dsh-keep-awake) — 任意 agent、subagent 或后台任务运行时持有系统唤醒锁，全部结束后按可配置宽限期释放；提供中英双语 Web 设置页，实时显示活动与唤醒锁状态，支持手动保持与阻止屏幕关闭。
 - [better-er/dsh-classic-coding](https://github.com/better-er/dsh-classic-coding) — 在 DSH 对话界面右侧滑出 Monaco 编辑器与文件树面板，直接在对话里编辑本地工作区代码，无需切到外部编辑器。
+- [better-er/dsh-tool-autoexpand](https://github.com/better-er/dsh-tool-autoexpand) — 自动展开 DSH 界面里新到达的工具调用卡片，侧栏开关在不干预/展开/折叠三态间循环，档位持久化到 localStorage。
 - [biggerboy/dsh-conversation-anchors](https://github.com/biggerboy/dsh-conversation-anchors) — 对话区左侧 Codex 风格短横线锚点，悬停预览，点击跳转到对应轮次。
 - [bill9109/dsh-drag-and-drop](https://github.com/bill9109/dsh-drag-and-drop) — 跨平台文件拖拽与原始路径插入，无需复制文件。
 - [bitxeno/dsh-github-picker](https://github.com/bitxeno/dsh-github-picker) — 输入框右下角 GitHub 图标打开当前仓库的 issue/PR 搜索弹窗，数据来自本机 gh CLI，点选即以 URL 或 @owner/repo#number 形式插入引用。
