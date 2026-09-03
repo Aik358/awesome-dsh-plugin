@@ -1735,6 +1735,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [liyu34/dsh-wsl-tray](https://github.com/liyu34/dsh-wsl-tray) - Windows desktop shortcut and system-tray launcher for DSH running in WSL, with fully hidden startup, tray open/restart/exit menu, and a plugin-configuration card to manage the shortcut.
 - [lucifergzsz414/dsh-windows-native](https://github.com/lucifergzsz414/dsh-windows-native) - Injects native-Windows (non-WSL) PowerShell, encoding, filesystem, and cross-platform-build gotchas into the system prompt.
 - [WilliamShi666/dsh-wsl-workspace-picker](https://github.com/WilliamShi666/dsh-wsl-workspace-picker) - Enhanced workspace directory browser for the web UI: one-click access to /mnt Windows drives under WSL, full breadcrumb ancestry and an always-visible path input.
+- [XINY11451/dsh-wsl](https://github.com/XINY11451/dsh-wsl) - WSL tools for DSH: run Linux commands, convert Windows/WSL paths, and summarize the WSL environment.
 
 ### Browser & Web
 
