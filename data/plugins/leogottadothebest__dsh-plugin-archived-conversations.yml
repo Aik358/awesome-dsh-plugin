@@ -1,5 +1,5 @@
-url: https://github.com/leogottadothebest/DSH-Archived-Delete
-name: leogottadothebest/DSH-Archived-Delete
+url: https://github.com/leogottadothebest/dsh-plugin-archived-conversations
+name: leogottadothebest/dsh-plugin-archived-conversations
 category: session
 description:
   en: 'Manage archived conversations in the Settings UI: unarchive them back to the sidebar, or permanently delete them with confirmation.'
