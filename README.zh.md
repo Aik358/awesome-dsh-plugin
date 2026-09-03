@@ -701,6 +701,7 @@ dsh plugin --profile web add dshmarket
 - [wssfk12138/dsh-damage-pulse](https://github.com/wssfk12138/dsh-damage-pulse) — 在 DSH Web 界面追踪 DeepSeek Token 用量、单次与会话费用及账户余额，并显示缓存感知的扣费动画。
 - [x2802490130-prog/dsh-balance-float](https://github.com/x2802490130-prog/dsh-balance-float) — Web UI 右上角悬浮窗：实时显示 DeepSeek 余额，支持手动刷新与一键优雅退出（Y/N 快捷键确认）。
 - [xchannel1987/dsh-token-usage-xc](https://github.com/xchannel1987/dsh-token-usage-xc) — DSH Token 用量统计插件 - 今日 Token 用量按模型分桶、缓存命中率、7 日趋势图、可选顶栏徽标、持久化存储自动清理。
+- [xfqz86/dsh-usage-stats](https://github.com/xfqz86/dsh-usage-stats) — 在侧边栏按模型、会话与日期统计 token 用量，并监控 OpenCode Go 额度、DeepSeek 余额与 Z.ai 额度。
 - [xiaweiliang060035/dsh-opencode-go-usage](https://github.com/xiaweiliang060035/dsh-opencode-go-usage) — 悬浮组件实时显示 OpenCode Go 各 key 用量（滚动/每周/每月），限流预警，自动发现 key 池。
 - [Xidong-AI/dsh-rate-limiter](https://github.com/Xidong-AI/dsh-rate-limiter) — 按 provider 令牌桶主动限速，超限请求在发出前延迟排队而非失败，避免触发上游 429。
 - [xie-tj/dsh-token-usage-ledger](https://github.com/xie-tj/dsh-token-usage-ledger) — 为 DeepSeek Harness 提供持久化 token 用量账本和 Web Usage 仪表盘。
