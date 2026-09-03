@@ -2836,7 +2836,7 @@ dsh plugin --profile web add dshmarket
 - [LeslieWylie/dsh-fleet-audit](https://github.com/LeslieWylie/dsh-fleet-audit) — 只读的 agent 机群凭据卫生审计：检查凭据文件权限、git remote 内嵌凭据（输出脱敏）与 provider token 字面量计数；零依赖、确定性。
 - [Letter2025/dsh-approval-llm](https://github.com/Letter2025/dsh-approval-llm) — 基于模型的权限审批：由独立审查模型自动应答 approval 权限请求。
 - [liuqingman/dsh-hawkeye-scan#npm](https://github.com/liuqingman/dsh-hawkeye-scan/tree/main/npm) — AI 驱动的源代码安全扫描工作台：5 个模型工具（start/finding/status/report/list）、/hawkeye Web UI 和 JSON/Markdown/HTML 漏洞报告；零依赖 Cordis 插件，可作 agent preset 或 npm 包安装。
-- [liuwenji007/dsh-trust-check](https://github.com/liuwenji007/dsh-trust-check) — 在设置页和 CLI 里对已安装的 DeepSeek Harness 插件做静态扫描，列出能力、字面量去向、安装脚本和提示注入，并给出可确认的裁决。
+- [liuwenji007/dsh-trust-check](https://github.com/liuwenji007/dsh-trust-check) — DSH 插件静态能力披露：设置页与 CLI 列出已装插件的权限能力、字面量去向、安装脚本与注入形态（prompt 注册、自带 skill 文本、bundle patch），每条附文件:行号证据。代码判定、可复现、零 token。只做披露，不做安全承诺，不判定恶意。
 - [log-li/dsh-automode](https://github.com/log-li/dsh-automode) — 为 DeepSeek Harness 提供 Claude Code 式自动审批：确定性 deny/allow 规则 + 两阶段 allow/reject 分类器，内置熔断器与拒绝引导。
 - [lonelymoon87/dsh-guardian](https://github.com/lonelymoon87/dsh-guardian) — 增加危险操作策略检查、输出脱敏和安全审查工作流。
 - [Luawig/dsh-cloudflare-access](https://github.com/Luawig/dsh-cloudflare-access) — 在 DSH Origin 校验 Cloudflare Access JWT，使 Settings、凭据、Agent Preset 管理与模型发现可在远程主机名下使用。
