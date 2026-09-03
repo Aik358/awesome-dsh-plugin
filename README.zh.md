@@ -3117,6 +3117,7 @@ dsh plugin --profile web add dshmarket
 - [yyh-001/dsh-meme](https://github.com/yyh-001/dsh-meme) — 聊天表情包：纯文本斗图、情绪主动发图、像 QQ/微信 一样发图、AI 自动学图、自定义表情包。
 - [ZelinW1/dsh-cosplay](https://github.com/ZelinW1/dsh-cosplay) — 让 DeepSeek Harness 的 Agent 扮演任何角色：全局扮演开关、酒馆 v2 角色卡（JSON 导入导出）、中立/角色化思考切换，内置 skill 支持一句话生成角色卡。
 - [zhu1090093659/dsh-web-ui#packages/dsh-pet](https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-pet) — 常驻界面的鲸鱼娘：随智能体状态切换动画，可摸头互动、喂小鱼干养亲密度，从幼鲸一路养成。
+- [zmm863-commits/dsh-dice-game](https://github.com/zmm863-commits/dsh-dice-game) — 🎲 骰子大作战 — 六种经典骰子玩法（吹牛、猜红点、猜红蓝、猜大小、猜单双、猜顺子），单人 vs AI + PeerJS 联机，全量中英双语，侧边栏入口打开游戏面板。
 - [zoahdev/dsh-pet-evolve](https://github.com/zoahdev/dsh-pet-evolve) — 会随 agent 成长的宠物：真实信号（已验证规则/会话/工具调用/压缩）驱动 5 阶段进化、镜像 agent 状态、一键导出成长分享卡。零依赖、全本地。
 - [ZutoMayoo/totoTheCat](https://github.com/ZutoMayoo/totoTheCat) — DSH Web 界面的桌宠插件：可拖拽的像素猫，带番茄闹钟、经验等级与 30 条可解锁的托托事实。
 <!-- END PLUGINS -->
